@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4k-Py-dqL">
-                                <rect key="frame" x="0.0" y="946" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="634" width="18" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="EIj-G7-O3b"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 </variation>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yju-A5-yWq">
-                                <rect key="frame" x="0.0" y="20" width="810" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="I4z-Mr-pdN"/>
                                 </constraints>
@@ -65,16 +65,210 @@
                                     </mask>
                                 </variation>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-os-xlM" userLabel="UseableView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="282-0S-0LZ" userLabel="GameBoard">
+                                        <rect key="frame" x="20" y="210" width="374" height="414"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P0p-vx-a5i">
+                                                <rect key="frame" x="0.0" y="0.0" width="774" height="98"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R4o-vE-MGQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="258" height="98"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whc-6L-jmm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOf-f9-oQ4"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Jo-kd-adP">
+                                                                <rect key="frame" x="86" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b4s-qk-bpl"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRq-Bh-2nN">
+                                                                <rect key="frame" x="172" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ma9-3N-wG3"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <variation key="widthClass=regular"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8NO-el-dmm">
+                                                        <rect key="frame" x="258" y="0.0" width="258" height="98"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYT-XO-iEj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2K-Jf-lEh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-ls-29D">
+                                                                <rect key="frame" x="86" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8m-j4-Pys"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-JC-1U1">
+                                                                <rect key="frame" x="172" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndQ-bR-EuV"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <variation key="widthClass=regular"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jfB-Fz-Pi3">
+                                                        <rect key="frame" x="516" y="0.0" width="258" height="98"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-dj-7Da">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnV-fA-3P0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5K-Qh-uEC">
+                                                                <rect key="frame" x="86" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G28-Jo-2Mh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3na-Oi-DyP">
+                                                                <rect key="frame" x="172" y="0.0" width="86" height="98"/>
+                                                                <state key="normal" backgroundImage="iPhone_X.png"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6UY-Hg-Ao0"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <variation key="widthClass=regular"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <variation key="widthClass=regular" axis="vertical"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="670" id="6Yv-aQ-XbM"/>
+                                            <constraint firstAttribute="bottom" secondItem="P0p-vx-a5i" secondAttribute="bottom" id="7FU-0l-Z2D"/>
+                                            <constraint firstItem="P0p-vx-a5i" firstAttribute="top" secondItem="282-0S-0LZ" secondAttribute="top" id="EUR-9X-NmN"/>
+                                            <constraint firstAttribute="height" constant="670" id="Nyo-kT-ybJ"/>
+                                            <constraint firstItem="P0p-vx-a5i" firstAttribute="leading" secondItem="282-0S-0LZ" secondAttribute="leading" id="csB-2a-fbk"/>
+                                            <constraint firstAttribute="trailing" secondItem="P0p-vx-a5i" secondAttribute="trailing" id="j4r-j8-8Uz"/>
+                                            <constraint firstAttribute="width" secondItem="282-0S-0LZ" secondAttribute="height" multiplier="28:31" id="nG2-OA-Qml"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6Yv-aQ-XbM"/>
+                                                <exclude reference="Nyo-kT-ybJ"/>
+                                                <exclude reference="nG2-OA-Qml"/>
+                                                <exclude reference="7FU-0l-Z2D"/>
+                                                <exclude reference="EUR-9X-NmN"/>
+                                                <exclude reference="csB-2a-fbk"/>
+                                                <exclude reference="j4r-j8-8Uz"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="nG2-OA-Qml"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="6Yv-aQ-XbM"/>
+                                                <include reference="Nyo-kT-ybJ"/>
+                                                <include reference="7FU-0l-Z2D"/>
+                                                <include reference="EUR-9X-NmN"/>
+                                                <include reference="csB-2a-fbk"/>
+                                                <include reference="j4r-j8-8Uz"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X's Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ3-66-JXD">
+                                        <rect key="frame" x="20" y="142" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="282-0S-0LZ" firstAttribute="centerY" secondItem="kVU-os-xlM" secondAttribute="centerY" id="0Vm-lJ-4Kv">
+                                        <variation key="widthClass=compact" constant="30"/>
+                                    </constraint>
+                                    <constraint firstItem="282-0S-0LZ" firstAttribute="centerX" secondItem="kVU-os-xlM" secondAttribute="centerX" id="Cdh-p1-0MJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJ3-66-JXD" secondAttribute="trailing" constant="20" id="I3X-SV-5fa"/>
+                                    <constraint firstItem="282-0S-0LZ" firstAttribute="top" secondItem="GJ3-66-JXD" secondAttribute="bottom" constant="20" id="KMv-Oy-eX6"/>
+                                    <constraint firstItem="GJ3-66-JXD" firstAttribute="leading" secondItem="kVU-os-xlM" secondAttribute="leading" constant="20" id="eQI-9s-kdn"/>
+                                    <constraint firstAttribute="trailing" secondItem="282-0S-0LZ" secondAttribute="trailing" constant="20" id="gTV-Kr-U2d"/>
+                                    <constraint firstItem="282-0S-0LZ" firstAttribute="centerY" secondItem="kVU-os-xlM" secondAttribute="centerY" id="lOr-Ht-yFA"/>
+                                    <constraint firstItem="282-0S-0LZ" firstAttribute="leading" secondItem="kVU-os-xlM" secondAttribute="leading" constant="20" id="x0P-nR-hgX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="GJ3-66-JXD"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="I3X-SV-5fa"/>
+                                        <exclude reference="eQI-9s-kdn"/>
+                                        <exclude reference="0Vm-lJ-4Kv"/>
+                                        <exclude reference="Cdh-p1-0MJ"/>
+                                        <exclude reference="KMv-Oy-eX6"/>
+                                        <exclude reference="gTV-Kr-U2d"/>
+                                        <exclude reference="lOr-Ht-yFA"/>
+                                        <exclude reference="x0P-nR-hgX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="GJ3-66-JXD"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="I3X-SV-5fa"/>
+                                        <include reference="eQI-9s-kdn"/>
+                                        <include reference="0Vm-lJ-4Kv"/>
+                                        <include reference="KMv-Oy-eX6"/>
+                                        <include reference="gTV-Kr-U2d"/>
+                                        <include reference="x0P-nR-hgX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Cdh-p1-0MJ"/>
+                                        <include reference="lOr-Ht-yFA"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4k-Py-dqL" secondAttribute="bottom" id="1OV-Us-Q2f"/>
+                            <constraint firstItem="kVU-os-xlM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A75-yD-Wqc"/>
+                            <constraint firstItem="kVU-os-xlM" firstAttribute="top" secondItem="Yju-A5-yWq" secondAttribute="bottom" id="Ch4-z6-BpO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kVU-os-xlM" secondAttribute="bottom" id="Dho-vm-LXQ"/>
                             <constraint firstItem="w4k-Py-dqL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FuN-54-XtQ"/>
                             <constraint firstItem="Yju-A5-yWq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KpS-8D-YMy"/>
-                            <constraint firstItem="Yju-A5-yWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g2G-7l-I1b"/>
+                            <constraint firstItem="w4k-Py-dqL" firstAttribute="top" secondItem="kVU-os-xlM" secondAttribute="bottom" id="MTu-mp-sz9"/>
+                            <constraint firstItem="Yju-A5-yWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g2G-7l-I1b">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="Yju-A5-yWq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hA1-Yd-dJh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kVU-os-xlM" secondAttribute="trailing" id="hm5-M9-BZz"/>
                             <constraint firstItem="w4k-Py-dqL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="icM-3H-sQF"/>
+                            <constraint firstItem="kVU-os-xlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xbC-7A-yu9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -85,9 +279,13 @@
                                 <exclude reference="KpS-8D-YMy"/>
                                 <exclude reference="g2G-7l-I1b"/>
                                 <exclude reference="hA1-Yd-dJh"/>
-                                <exclude reference="FuN-54-XtQ"/>
-                                <exclude reference="icM-3H-sQF"/>
                                 <exclude reference="1OV-Us-Q2f"/>
+                                <exclude reference="Dho-vm-LXQ"/>
+                                <exclude reference="A75-yD-Wqc"/>
+                                <exclude reference="Ch4-z6-BpO"/>
+                                <exclude reference="FuN-54-XtQ"/>
+                                <exclude reference="MTu-mp-sz9"/>
+                                <exclude reference="icM-3H-sQF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,9 +293,11 @@
                                 <include reference="w4k-Py-dqL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="FuN-54-XtQ"/>
-                                <include reference="icM-3H-sQF"/>
                                 <include reference="1OV-Us-Q2f"/>
+                                <include reference="A75-yD-Wqc"/>
+                                <include reference="FuN-54-XtQ"/>
+                                <include reference="MTu-mp-sz9"/>
+                                <include reference="icM-3H-sQF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -108,16 +308,32 @@
                                 <include reference="KpS-8D-YMy"/>
                                 <include reference="g2G-7l-I1b"/>
                                 <include reference="hA1-Yd-dJh"/>
+                                <include reference="Dho-vm-LXQ"/>
+                                <include reference="Ch4-z6-BpO"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameStateLabel" destination="GJ3-66-JXD" id="CAE-3J-0XQ"/>
+                        <outlet property="gameStateNavBar" destination="Yju-A5-yWq" id="hDk-el-3Ea"/>
+                        <outletCollection property="gameBoardButtons" destination="Whc-6L-jmm" collectionClass="NSMutableArray" id="op7-gE-fqm"/>
+                        <outletCollection property="gameBoardButtons" destination="7Jo-kd-adP" collectionClass="NSMutableArray" id="7L4-1J-v2r"/>
+                        <outletCollection property="gameBoardButtons" destination="RRq-Bh-2nN" collectionClass="NSMutableArray" id="1Rh-QL-U8p"/>
+                        <outletCollection property="gameBoardButtons" destination="mYT-XO-iEj" collectionClass="NSMutableArray" id="0jZ-Um-aMe"/>
+                        <outletCollection property="gameBoardButtons" destination="WUh-ls-29D" collectionClass="NSMutableArray" id="7eA-eg-RiK"/>
+                        <outletCollection property="gameBoardButtons" destination="acx-JC-1U1" collectionClass="NSMutableArray" id="9KW-wy-VrE"/>
+                        <outletCollection property="gameBoardButtons" destination="ZBw-dj-7Da" collectionClass="NSMutableArray" id="VDu-Q1-NYv"/>
+                        <outletCollection property="gameBoardButtons" destination="D5K-Qh-uEC" collectionClass="NSMutableArray" id="tg6-Rb-h4a"/>
+                        <outletCollection property="gameBoardButtons" destination="3na-Oi-DyP" collectionClass="NSMutableArray" id="HKo-HW-jkS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="iPhone_X.png" width="86" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
