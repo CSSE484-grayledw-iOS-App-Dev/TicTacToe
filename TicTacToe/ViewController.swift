@@ -15,5 +15,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func pressedNewGame(_ sender: Any) {
+        print("New Game")
+    }
 }
 
