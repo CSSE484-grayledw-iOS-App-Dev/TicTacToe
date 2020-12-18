@@ -22,6 +22,7 @@
 		6CD515CD258B3D3E00EA3B43 /* iPad_O.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD515C4258B3D3E00EA3B43 /* iPad_O.png */; };
 		6CD515CE258B3D3E00EA3B43 /* iPhone_X.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD515C5258B3D3E00EA3B43 /* iPhone_X.png */; };
 		6CD515CF258B3D3E00EA3B43 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD515C6258B3D3E00EA3B43 /* Icon.png */; };
+		6CD515D2258C2D7700EA3B43 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD515D1258C2D7700EA3B43 /* TicTacToeGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		6CD515C4258B3D3E00EA3B43 /* iPad_O.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_O.png; sourceTree = "<group>"; };
 		6CD515C5258B3D3E00EA3B43 /* iPhone_X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_X.png; sourceTree = "<group>"; };
 		6CD515C6258B3D3E00EA3B43 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6CD515D1258C2D7700EA3B43 /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				6CD515B2258B3BF500EA3B43 /* Assets.xcassets */,
 				6CD515B4258B3BF500EA3B43 /* LaunchScreen.storyboard */,
 				6CD515B7258B3BF500EA3B43 /* Info.plist */,
+				6CD515D1258C2D7700EA3B43 /* TicTacToeGame.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD515D2258C2D7700EA3B43 /* TicTacToeGame.swift in Sources */,
 				6CD515AE258B3BF400EA3B43 /* ViewController.swift in Sources */,
 				6CD515AA258B3BF400EA3B43 /* AppDelegate.swift in Sources */,
 				6CD515AC258B3BF400EA3B43 /* SceneDelegate.swift in Sources */,
